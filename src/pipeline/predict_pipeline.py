@@ -34,14 +34,14 @@ class PredictPipeline:
             
             os.makedirs(self.config.pred_file_input_dir, exist_ok=True)
             input_csv_file=self.request.files['file']
-            pred_file_path=os.path.join(self.config.pred_file_input_dir,input_csv_file.file_name)
+            pred_file_path=os.path.join(self.config.pred_file_input_dir,input_csv_file.filename)
             input_csv_file.save(pred_file_path)
             return pred_file_path
         except Exception as e:
             raise CustomException(e, sys)
     def predict(self,df :pd.DataFrame):
         try:
-            model=self.utils.load_objest(self.config.model_file_path) 
+            model=self.utils.load_object(self.config.model_file_path) 
             pp=self.utils.load_object(self.config.preprocessor_file_path)
             trans_x=pp.transform(df)#nump arr
             pred_y=model.predict(trans_x)#np arr

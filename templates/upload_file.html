@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>upload csv file for prediction</h1>
-    <form action="" method="POST" enctype="">
+    <form action="/predict" method="POST" enctype="multipart/form-data">
         <div class="frame">
             <div class="center">
                 <div class="title">
@@ -15,7 +15,7 @@
 
 
             <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
-			<input type="file" class="upload-input" name = "file" accept=".csv" >
+			<input type="file" class="upload-input" name = "file" accept=".csv" required >
             </div>
         <button type="submit" class="btn" name="uploadbutton" >upload the file</button>
         </div>

@@ -1,3 +1,13 @@
+# Tools (must be first)
+pip>=24.0
+setuptools>=70.0
+wheel>=0.42.0
+cython>=0.29.36
+
+# YAML needs to come after Cython
+PyYAML==5.3.1
+
+# Rest of your dependencies
 aiofiles
 dill==0.3.5.1
 dnspython==2.2.1
@@ -20,8 +30,7 @@ watchfiles==0.17.0
 websockets==10.3
 wincertstore==0.2
 xgboost==1.6.2
+scikit-learn==1.3.2
 neuro-mf==0.0.5
 boto3==1.26.105
 Werkzeug==2.2.2
-
--e .

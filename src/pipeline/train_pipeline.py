@@ -34,6 +34,6 @@ class TrainingPipeline:
             feature_store_file_path=self.start_data_ingestion()
             train_arr,test_arr,preprocessor_file_path=self.start_data_transformation(feature_store_file_path)
             model_path= self.start_model_training(train_arr, test_arr, preprocessor_file_path)
-            print("training completed r2_score is",r2_score)
+            print("training completed r2_score is",model_path)
         except Exception as e:
             raise CustomException(e, sys)
