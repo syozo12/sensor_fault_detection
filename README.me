@@ -1,0 +1,65 @@
+# Sensor Fault Detection Application
+
+
+## Features
+
+- User-friendly web interface for file upload
+- Batch prediction on uploaded CSV files
+- Downloadable prediction results
+- Model training pipeline accessible from the UI
+- Logging for monitoring and debugging
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Anaconda or Miniconda
+- Python 3.11
+
+## Setup Instructions
+
+### 1. Create a Conda Environment
+
+Run the following command to create a new Conda environment named `faultenv` with Python 3.11:
+
+```sh
+conda create -n faultenv python=3.11 -y
+```
+
+### 2. Activate the Environment
+
+Activate the newly created environment with:
+
+```sh
+conda activate faultenv
+```
+
+### 3. Install Requirements
+
+Install the necessary dependencies using pip:
+
+```sh
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+Start the application by running:
+
+```sh
+python app.py
+```
+
+## Usage
+
+Once the application is running, open your web browser and navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to access the interface.
+
+- To train the model, click the "Start Training" button on the home page.
+- To make predictions, upload your sensor data CSV file on the prediction page and download the results.
+
+## Project Structure
+
+- `app.py`: Main Flask application
+- `src/`: Source code for pipelines, components, and utilities
+- `artifacts/`: Stores trained models and preprocessors
+- `templates/` and `static/`: Frontend HTML and CSS files
